@@ -1,7 +1,8 @@
 # -*- coding:utf-8 -*-
 
 import numpy as np
-import cv2
+import cv2, sys
+from os.path import realpath, dirname
 from filterarea import getValidArea
 from matplotlib import pyplot as plt
 from strokewidth import getStrokeWidth
@@ -62,7 +63,9 @@ def enlargediff(sobelimg):
     enforceimg = cv2.addWeighted(left_right_img, 0.5, top_bottom_img, 0.5, 0)
     return enforceimg
 
-original_img = cv2.imread('4.png')
+path = dirname(realpath(__file__))
+filename = path+'\\'+sys.argv[1]
+original_img = cv2.imread(filename)
 blurimg = cv2.GaussianBlur(original_img,(5,5),0) 
 gray = cv2.cvtColor(blurimg, cv2.COLOR_BGR2GRAY)
 # 使用双边滤波，5 邻域直径，两个 75 分别是空间高斯函数标准差，灰度值相似性高斯函数标准差
