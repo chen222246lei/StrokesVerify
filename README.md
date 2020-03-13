@@ -10,4 +10,4 @@ Recognize Chinese in a picture. The step are:
 4. filter the end areas that pass the Chinese strokes width.
 
 use method
-The main method is findarea.py, if want change the different image please edit the 65 row. 
+The main method is findarea.py, use: python findarea.py 1.png, the result will display three pictures(press space key to switch), the last picture is the finally image.
