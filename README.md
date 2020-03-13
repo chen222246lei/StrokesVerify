@@ -8,3 +8,6 @@ Recognize Chinese in a picture. The step are:
    3.3 verify the connected areas, remove the areas which are not belong to Chinese.
    3.4 remove the areas which include more than 2 sub area
 4. filter the end areas that pass the Chinese strokes width.
+
+use method
+The main method is findarea.py, if want change the different image please edit the 65 row. 
